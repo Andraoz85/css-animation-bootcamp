@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # css-animation-bootcamp
 =======
 ![Poster](poster.png)
