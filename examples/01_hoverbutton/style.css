@@ -1,0 +1,32 @@
+/* Gör en knapp som på ```:hover``` gör en mjuk övergång på följande egenskaper: 
+* width x height (alt. padding) * background-color * box-shadow */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.btn:hover {
+  padding: 15px 25px;
+  background-color: red;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}

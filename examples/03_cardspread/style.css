@@ -1,0 +1,117 @@
+/* reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(192, 192, 192);
+}
+
+.card {
+    position: fixed;
+    width: 150px;
+    height: 200px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.5s ease;
+    /* gör mjuk transition */
+    transform-origin: bottom center;
+    /* få korten att rotera från botten */
+}
+
+/* Färg på korten */
+.card:nth-child(1) {
+    background-color: #dcb2d8;
+}
+
+.card:nth-child(2) {
+    background-color: #872f93;
+}
+
+.card:nth-child(3) {
+    background-color: #373ca0;
+}
+
+.card:nth-child(4) {
+    background-color: #4097d1;
+}
+
+.card:nth-child(5) {
+    background-color: #267548;
+}
+
+.card:nth-child(6) {
+    background-color: #6cca85;
+}
+
+.card:nth-child(7) {
+    background-color: #f4f25c;
+}
+
+.card:nth-child(8) {
+    background-color: #ed9140;
+}
+
+.card:nth-child(9) {
+    background-color: #d82828;
+}
+
+/* Ursprunglig position */
+.card {
+    transform: rotateY(0deg);
+    /* Ingen rotation */
+    z-index: 0;
+    /* korten ligger på samma nivå */
+}
+
+/* När body hovras */
+body:hover .card:nth-child(1) {
+    transform: rotate(-40deg);
+    z-index: 9;
+    /* kortet hamnar över de andra */
+}
+
+body:hover .card:nth-child(2) {
+    transform: rotate(-30deg);
+    z-index: 8;
+}
+
+body:hover .card:nth-child(3) {
+    transform: rotate(-20deg);
+    z-index: 7;
+}
+
+body:hover .card:nth-child(4) {
+    transform: rotate(-10deg);
+    z-index: 6;
+}
+
+body:hover .card:nth-child(5) {
+    transform: rotate(0deg);
+    z-index: 5;
+}
+
+body:hover .card:nth-child(6) {
+    transform: rotate(10deg);
+    z-index: 4;
+}
+
+body:hover .card:nth-child(7) {
+    transform: rotate(20deg);
+    z-index: 3;
+}
+
+body:hover .card:nth-child(8) {
+    transform: rotate(30deg);
+    z-index: 2;
+}
+
+body:hover .card:nth-child(9) {
+    transform: rotate(40deg);
+    z-index: 1;
+}

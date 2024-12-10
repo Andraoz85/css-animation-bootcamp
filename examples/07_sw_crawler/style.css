@@ -1,0 +1,114 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: yellow;
+    background-image: url("https://t4.ftcdn.net/jpg/06/28/24/75/360_F_628247543_cctSYL94hc7jyzBxhMKm07jimAXK4GVd.jpg");
+    background-color: black;
+    /* Fallback */
+    background-size: cover;
+    overflow: hidden;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    /* Relativ position för att pseudo-element kan placeras inuti */
+    width: 80%;
+    height: 100vh;
+    perspective: 800px;
+    /* Skapar 3D-effekten */
+    overflow: hidden;
+}
+
+main img {
+    position: absolute;
+    top: 110%;
+    /* Börjar längst ner undewr skärmen */
+    left: 50%;
+    /* Centrera */
+    transform: translateX(-50%) rotateX(20deg);
+    animation: crawl 20s linear infinite;
+    animation-delay: 0s;
+    /* Startar direkt */
+    width: 200px;
+}
+
+main .episode {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%) rotateX(20deg);
+    animation: crawl 20s linear infinite;
+    animation-delay: 1s;
+    /* Fördröjning */
+    font-size: 1.5rem;
+    font-style: italic;
+    text-align: center;
+}
+
+main h1 {
+    position: absolute;
+    top: 110%;
+    left: 50%;
+    transform: translateX(-50%) rotateX(20deg);
+    animation: crawl 20s linear infinite;
+    animation-delay: 2s;
+    /* Fördröjning */
+    font-size: 2.5rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+main p {
+    position: absolute;
+    top: 110%;
+    /* Börjar längre ned */
+    left: 50%;
+    transform: translateX(-50%) rotateX(20deg);
+    animation: crawl 20s linear infinite;
+    animation-delay: 3s;
+    /* Ökar fördröjning för varje paragraf */
+    font-size: 1.2rem;
+    line-height: 1.5;
+    text-align: center;
+}
+
+main p:nth-of-type(1) {
+    top: 110%;
+    animation-delay: 4s;
+    /* Första paragrafen */
+}
+
+main p:nth-of-type(2) {
+    top: 110%;
+    animation-delay: 5s;
+    /* Andra paragrafen */
+}
+
+main p:nth-of-type(3) {
+    top: 110%;
+    animation-delay: 6s;
+    /* Tredje paragrafen */
+}
+
+/* Keyframes för crawl */
+@keyframes crawl {
+    0% {
+        top: 100%;
+        transform: translateX(-50%) rotateX(20deg);
+    }
+
+    100% {
+        top: -200%;
+        transform: translateX(-50%) rotateX(20deg);
+    }
+}

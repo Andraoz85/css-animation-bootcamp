@@ -1,0 +1,46 @@
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(142, 142, 142);
+}
+
+.spinner {
+    display: block;
+    /* Gör elementet synligt */
+    position: relative;
+    height: 25px;
+    width: 200px;
+    border: 2px solid black;
+    background: #fff;
+    overflow: hidden;
+    /* Döljer innehållet som går utanför elementet */
+}
+
+/* pseudo-elementet som skapar animationen */
+.spinner::after {
+    content: '';
+    position: absolute;
+    /* Positionerar elementet relativt spinner-behållanre */
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    /* börjar med noll bredd */
+    background: #FF3D00;
+    animation: 6s prog ease-in infinite;
+}
+
+@keyframes prog {
+    to {
+        width: 100%;
+    }
+}

@@ -1,0 +1,64 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+    font-family: Arial, sans-serif;
+}
+
+article {
+    width: 200px;
+    height: 300px;
+    perspective: 1000px;
+    /* Perspektiv för 3D-effekten */
+}
+
+article section {
+    position: absolute;
+    /* Absolut positionering så fram- och baksida placeras ovanpå varandra */
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    /* Döljer baksidan av kortet */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: transform 1s ease-in-out;
+    /* Animationseffekt */
+}
+
+.front {
+    background-color: #3498db;
+    color: white;
+    transform: rotateY(0deg);
+    /* Positionerar framsidan framåt */
+}
+
+.back {
+    background-color: #f1c40f;
+    color: black;
+    transform: rotateY(180deg);
+    /* Positionerar baksidan bakåt */
+}
+
+/* Flip-effekt */
+article:hover .front {
+    transform: rotateY(-180deg);
+    /* Snurrar framåt */
+}
+
+article:hover .back {
+    transform: rotateY(0deg);
+    /* Snurrar bakåt */
+}
